@@ -1,0 +1,67 @@
+@mixin transform-origin($origin) {
+    -moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin rotate($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+@mixin translate($value-x, $value-y) {
+    -moz-transform: translate($value-x, $value-y);
+    -o-transform: translate($value-x, $value-y);
+    -ms-transform: translate($value-x, $value-y);
+    -webkit-transform: translate($value-x, $value-y);
+    transform: translate($value-x, $value-y);
+}
+
+@mixin translateX($value-x) {
+    -moz-transform: translateX($value-x);
+    -o-transform: translateX($value-x);
+    -ms-transform: translateX($value-x);
+    -webkit-transform: translateX($value-x);
+    transform: translateX($value-x);
+}
+
+@mixin user-select() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+@mixin box-shadow($value) {
+    -moz-box-shadow: $value;
+    -o-box-shadow: $value;
+    -ms-box-shadow: $value;
+    -webkit-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin appearance($value) {
+    -moz-appearance: $value;
+    -o-appearance: $value;
+    -ms-appearance: $value;
+    -webkit-appearance: $value;
+    appearance: $value;
+}
+
+@mixin gradient($direction, $color1, $color2) {
+    background: -webkit-linear-gradient($direction, $color1, $color2);
+    background: -moz-linear-gradient($direction, $color1, $color2);
+    background: -ms-linear-gradient($direction, $color1, $color2);
+    background: -o-linear-gradient($direction, $color1, $color2);
+    background: linear-gradient($direction, $color1, $color2);
+}

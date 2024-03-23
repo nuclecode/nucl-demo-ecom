@@ -1,0 +1,78 @@
+@import './variables.scss';
+@import './typographyMixins.scss';
+
+.MuiFormControlLabel-label,
+.MuiFormControlLabel-root .MuiFormControlLabel-label {
+    font-size: 14px;
+
+    // &.Mui-disabled {
+    //     color: $site-disabled-color;
+    // }
+
+
+    @media (min-width: $breakpoint-sm-down) {
+        font-size: 16px;
+    }
+}
+
+.MuiTextField-root {
+    .MuiInputLabel-root {
+        @include typographyBody1();
+        // color: $brand-neutral600-color;
+        top: -5px; // needed for height change below
+
+        &.Mui-focused,
+        &.MuiFormLabel-filled {
+            @include typographyCaption();
+            color: $site-text-color;
+            top: 3px;
+        }
+
+        &.Mui-error {
+            color: $error-color;
+        }
+
+        // &.Mui-disabled {
+        //     color: $site-disabled-color;
+        // }
+    }
+
+    .MuiOutlinedInput-root {
+        @include typographyBody1();
+        color: $site-text-color;
+
+		.MuiInputBase-input {
+			&.MuiOutlinedInput-input {
+				padding: 10px 14px;
+			}
+		}
+
+        // .MuiOutlinedInput-notchedOutline {
+        //     border: 1px solid $brand-neutral600-color;
+        // }
+
+        &.Mui-focused {
+            .MuiOutlinedInput-notchedOutline {
+                border-color: $site-text-color;
+            }
+        }
+
+        &.Mui-error {
+            .MuiOutlinedInput-notchedOutline {
+                border-color: $error-color;
+            }
+        }
+
+        // &.Mui-disabled {
+        //     .MuiOutlinedInput-notchedOutline {
+        //         border-color: $site-disabled-color;
+        //     }
+        // }
+    }
+}
+
+.MuiAutocomplete-inputRoot {
+    .MuiAutocomplete-input {
+        font-family: $site-default-font-family;
+    }
+}

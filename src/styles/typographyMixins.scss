@@ -1,0 +1,34 @@
+@import './variables.scss';
+
+@mixin typographyBody1 {
+	font-family: $site-default-font-family;
+	font-size: 14px;
+	font-weight: $site-regular;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+
+	&:first-letter {
+		text-transform: capitalize;
+	}
+
+	@media (min-width: $breakpoint-md-down) {
+		font-size: 16px;
+	}
+}
+
+@mixin typographyCaption {
+	font-family: $site-default-font-family;
+	font-size: 14px;
+	font-weight: $site-regular;
+	line-height: 18px;
+	letter-spacing: 0.5px;
+}
+
+@mixin typographyButton {
+	font-family: $site-default-font-family;
+	font-size: 16px;
+	font-weight: $site-bold;
+	line-height: 16px;
+	letter-spacing: 1.5px;
+	text-transform: capitalize;
+}
