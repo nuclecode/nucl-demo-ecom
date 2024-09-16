@@ -1,0 +1,43 @@
+// spacing
+$spacing-half-x: 4px;
+$spacing-1x: 8px;
+$spacing-2x: 16px;
+$spacing-3x: 24px;
+$spacing-4x: 32px;
+$spacing-5x: 40px;
+
+.page-top-space {
+	padding-top: 90px; //needed to allocate for fixed header
+}
+
+page-section {
+	display: block;
+	margin-bottom: $spacing-5x;
+}
+
+section,
+div {
+	&.tm-by-half {
+		margin-top: $spacing-half-x;
+	}
+
+	&.tm-by1 {
+		margin-top: $spacing-1x;
+	}
+
+	&.tm-by2 {
+		margin-top: $spacing-2x;
+	}
+
+	&.tm-by3 {
+		margin-top: $spacing-3x;
+	}
+
+	&.tm-by4 {
+		margin-top: $spacing-4x;
+	}
+
+	&.tm-by5 {
+		margin-top: $spacing-5x;
+	}
+}

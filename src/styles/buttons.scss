@@ -1,0 +1,126 @@
+@import './variables.scss';
+
+.MuiButtonBase-root {
+	&.MuiButton-root {
+		font-family: $site-default-font-family;
+		font-size: $site-default-font-size;
+		font-weight: $site-regular;
+		text-transform: none;
+		line-height: 1;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		outline: none;
+		padding: 10px $spacing-2x 8px;
+	
+		&.MuiButton-contained {
+			background-color: $button-color;
+			border: 1px solid $button-color;
+	
+			&:hover,
+			&:hover:enabled,
+			&:hover:active,
+			&:hover:active:enabled {
+				background-color: $button-contained-color-hover;
+				border-color: $button-contained-color-hover;
+			}
+	
+			&:focus,
+			&:focus:enabled {
+				background-color: $button-contained-color-focus;
+				border-color: $button-contained-color-focus;
+			}
+	
+			&:active,
+			&:active:enabled,
+			&:active:focus,
+			&:active:focus:enabled {
+				background-color: $button-color;
+				border-color: $button-color;
+			}
+	
+			&:disabled,
+			&:hover:disabled,
+			&:active:disabled,
+			&:focus:disabled,
+			&:hover:active:disabled,
+			&.disabled,
+			&.disabled:hover,
+			&.disabled:active,
+			&.disabled:focus,
+			&.Mui-disabled,
+			&.Mui-disabled:hover,
+			&.Mui-disabled:active,
+			&.Mui-disabled:focus,
+			&.Mui-disabled:active:focus {
+				background-color: $button-background-color-disabled;
+				border-color: $button-background-color-disabled;
+				color: $button-color-disabled;
+				cursor: not-allowed;
+				pointer-events: inherit;
+			}
+		}
+	
+		&.MuiButton-outlined {
+			background-color: transparent;
+			border: 1px solid $button-color;
+			color: $button-color;
+	
+			&:hover,
+			&:hover:enabled,
+			&:hover:active,
+			&:hover:active:enabled {
+				background-color: $button-outlined-color-hover;
+				border-color: $button-outlined-border-color-hover;
+				color: $button-text-color-hover;
+			}
+	
+			&:focus,
+			&:focus:enabled {
+				background-color: $button-outlined-color-focus;
+				border-color: $button-outlined-border-color-focus;
+				color: $button-text-color-focus;
+			}
+	
+			&:active,
+			&:active:enabled,
+			&:active:focus,
+			&:active:focus:enabled {
+				background-color: transparent;
+				border-color: $button-outlined-border-color-active;
+				color: $button-outlined-border-color-active;
+			}
+	
+			&:disabled,
+			&:hover:disabled,
+			&:active:disabled,
+			&:focus:disabled,
+			&:hover:active:disabled,
+			&.disabled,
+			&.disabled:hover,
+			&.disabled:active,
+			&.disabled:focus,
+			&.Mui-disabled,
+			&.Mui-disabled:hover,
+			&.Mui-disabled:active,
+			&.Mui-disabled:focus,
+			&.Mui-disabled:active:focus {
+				border-color: $button-color-disabled;
+				color: $button-color-disabled;
+				cursor: not-allowed;
+				pointer-events: inherit;
+			}
+		}
+	}
+
+    &.MuiButton-startIcon {
+        svg {
+            font-size: 14px;
+        }
+    }
+
+	&.MuiIconButton-root {
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}

@@ -1,0 +1,118 @@
+@import './variables.scss';
+@import './typographyMixins.scss';
+
+.MuiTypography-root {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	letter-spacing: 0;
+
+	&.MuiTypography-h1 {
+		font-family: $site-alt-font-family;
+		font-size: 26px;
+		font-weight: $site-bold;
+		color: $site-text-color;
+		line-height: 32px;
+		letter-spacing: 0.25px;
+		text-transform: capitalize;
+		margin-bottom: $spacing-2x;
+
+		@media (min-width: $breakpoint-md-down) {
+			font-size: 36px;
+			line-height: 40px;
+			letter-spacing: -0.15px;
+		}
+	}
+
+	&.MuiTypography-h2 {
+		font-family: $site-alt-font-family;
+		font-size: 20px;
+		font-weight: $site-bold;
+		line-height: 32px;
+		text-transform: capitalize;
+
+		@media (min-width: $breakpoint-md-down) {
+			font-size: 26px;
+			line-height: 40px;
+		}
+	}
+
+	&.MuiTypography-h3 {
+		font-family: $site-default-font-family;
+		font-size: 18px;
+		font-weight: $site-regular;
+		line-height: 24px;
+		letter-spacing: 0.15px;
+		text-transform: capitalize;
+
+		@media (min-width: $breakpoint-md-down) {
+			font-size: 20px;
+			line-height: 32px;
+			letter-spacing: 0.25px;
+		}
+	}
+
+	&.MuiTypography-subtitle1 {
+		font-family: $site-default-font-family;
+		font-size: 16px;
+		font-weight: $site-regular;
+		line-height: 24px;
+		letter-spacing: 0.15px;
+
+		&:first-letter {
+			text-transform: capitalize;
+		}
+
+		@media (min-width: $breakpoint-md-down) {
+			font-size: 18px;
+			line-height: 30px;
+			letter-spacing: 0.25px;
+		}
+	}
+
+	// &.MuiTypography-subtitle2 {
+	// 	font-family: $site-default-font-family;
+	// 	font-size: 18px;
+	// 	font-weight: $site-regular;
+	// 	line-height: 24px;
+	// 	letter-spacing: 0.15px;
+
+	// 	&:first-letter {
+	// 		text-transform: capitalize;
+	// 	}
+	// }
+
+	&.MuiTypography-body1 {
+		@include typographyBody1();
+	}
+
+	// &.MuiTypography-body2 {
+	// 	font-family: $site-default-font-family;
+	// 	font-size: 16px;
+	// 	font-weight: $site-regular;
+	// 	line-height: 22px;
+	// 	letter-spacing: 0.5px;
+
+	// 	&:first-letter {
+	// 		text-transform: capitalize;
+	// 	}
+	// }
+
+	&.MuiTypography-caption {
+		@include typographyCaption();
+	}
+
+	&.MuiTypography-button {
+		@include typographyButton();
+	}
+
+	&.MuiTypography-overline {
+		font-family: $site-default-font-family;
+		font-size: 12px;
+		font-weight: $site-regular;
+		line-height: 18px;
+		letter-spacing: 0.5px;
+		text-transform: inherit;
+	}
+}
